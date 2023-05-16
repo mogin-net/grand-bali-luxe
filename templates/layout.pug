@@ -1,26 +1,42 @@
+include /navigation.pug
+include /profile.pug
+- var company = "Grand Bali Luxe Tours"
+
 doctype html
 html(lang="en")
   head
-    block title
-    - var headerTitle = title ? `Webpage Template Title :: ${title}` : "Webpage Template Title"
-    title #{headerTitle}
     meta(charset="utf-8")/
-    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")/
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")/
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="/css/main.css")/
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet")
+    block title
+    - var headerTitle = title ? `${company} :: ${title}` : company
+    title #{headerTitle}
     noscript: link(rel="stylesheet" href="/css/noscript.css")/
-  body.is-preload
+  body
     // Wrapper 
-    #wrapper
+    .page-container
       // Navigation 
-      nav#nav
-        a(href="#").icon.solid.fa-home: span Home
+      nav.intro
+        ul
+          each nav in navs 
+            li
+              a(href=title ? `/#${nav.href}` : `#${nav.href}` data-tab-target=`#${nav.href}`)=nav.title
 
       // Main Content 
-      #main
+      .tab-content
         block content
 
       // Footer 
-      #footer
-        ul.copyright 
-          li#copyright &copy; 2021 - #{new Date().getFullYear()}
+      footer.intro
+        p
+          span#copyright &copy; #{new Date().getFullYear() === 2023 ? new Date().getFullYear() : `2021 - ${new Date().getFullYear()}`}
+          span &nbsp;#{company}
+      .decoration.top-left.pulse
+        include ./flower.pug
+      .decoration.bottom-right.pulse
+        include ./flower.pug
     include ./scripts.pug
