@@ -1,0 +1,103 @@
+extends /layout.pug
+block title
+  - title = "Design"
+
+block content 
+  article#design.panel
+    header 
+      h2= `${title}`
+    h3 Typography
+    .elements
+      h1 H1 Header
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      h2 H2 Header
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      h3 H3 Header
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      h4 H4 Header
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      h5 H5 Header
+        span Subtitle
+      p 
+        | Lorem ipsum <b>dolor</b> sit <i>amet</i>, consectetur adipiscing<sup>2</sup> elit. Suspendisse congue<sub>1</sub> enim vitae <del>urna</del> mollis dignissim vitae ut sapien. Etiam eu sapien eleifend dui blandit porta eget sed dolor. Sed iaculis nisl nunc, vel euismod odio pellentesque ut.
+      H6 Blockquote
+      blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      H6 Code
+      pre
+        code
+          | if (true) {
+          |   #{"<lorem></lorem>\ntess"}
+          |   var t = 1;
+          | }
+      H6 Unordered List
+      ul 
+        li Level 1.1
+        li Level 1.2
+          ul
+            li Level 2.1
+            li Level 2.2
+              ul
+                li Level 3.1
+                  ul
+                    li Level 4.1
+                    li Level 4.2
+                li Level 3.2
+      H6 Ordered List
+      ol 
+        li Level 1.1
+        li Level 1.2
+          ol
+            li Level 2.1
+            li Level 2.2
+              ol
+                li Level 3.1
+                li Level 3.2
+
+    h3 Tables
+    .elements
+      table.default
+        caption Default
+        thead
+          tr 
+            th Header 1
+            th Header 2
+            th Header 3
+        tbody
+          tr 
+            td Entry 1
+            td Entry 2
+            td Entry 3
+          tr 
+            td Entry 1
+            td Entry 2
+            td Entry 3
+        tfoot 
+          tr 
+            td Foot 1
+            td Foot 2
+            td Foot 3
+
+    h3 Colors 
+    .elements.colors 
+      div.color.primary
+        div Primary
+      div.color.secondary 
+        div Secondary
+      div.color.accent 
+        div Accent
+      div.color.accent-1
+        div Accent 1
+      div.color.accent-2
+        div Accent 2
+    h3 Others
+    .elements.colors
+      div.color.background
+        div Background
+      div.color.coding
+        div Coding
+      div.color.gray
+        div Gray
+      div.color.text
+        div Text
+      div.color.footer
+        div Footer
