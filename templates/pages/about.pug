@@ -1,11 +1,13 @@
 // About 
-div(id=`${navs.about.title.toLowerCase()}` data-tab-content).fade-in
-  <h1>Meet our team</h1>
+div(id=`${navs.about.title.toLowerCase()}` data-tab-content).fade-in.center
+  header
+    h2 Meet our team
   each profile, index in profiles
     .profile(class=index % 2 === 1 ? "right" : undefined)
       img(src=profile.image alt="Profile picture").profile-picture.bg-shadow
       .profile-detail
-        h2=profile.name
+        h4=profile.name
         ul.profile-skills
           each skill in profile.skills 
             li=skill
+  hr

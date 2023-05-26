@@ -32,9 +32,11 @@ html(lang="en")
 
       // Footer 
       footer.intro
-        p
+        p.center
           span#copyright &copy; #{new Date().getFullYear() === 2023 ? new Date().getFullYear() : `2021 - ${new Date().getFullYear()}`}
           span &nbsp;#{company}
+          span.primary.text-color &nbsp;&#9670;&nbsp;
+          a(href="/contact.html").link Contact
       .decoration.top-left.pulse
         include ./flower.pug
       .decoration.bottom-right.pulse

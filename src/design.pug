@@ -3,11 +3,11 @@ block title
   - title = "Design"
 
 block content 
-  article#design.panel
+  div
     header 
       h2= `${title}`
     h3 Typography
-    .elements
+    div(style="margin: 1em 0")
       h1 H1 Header
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       h2 H2 Header
@@ -19,7 +19,7 @@ block content
       h5 H5 Header
         span Subtitle
       p 
-        | Lorem ipsum <b>dolor</b> sit <i>amet</i>, consectetur adipiscing<sup>2</sup> elit. Suspendisse congue<sub>1</sub> enim vitae <del>urna</del> mollis dignissim vitae ut sapien. Etiam eu sapien eleifend dui blandit porta eget sed dolor. Sed iaculis nisl nunc, vel euismod odio pellentesque ut.
+        | Lorem ipsum <b>bold</b> sit <i>italic</i>, consectetur adipiscing x<sup>2</sup> elit. Suspendisse congue y<sub>1</sub> enim vitae <del>delete</del> mollis dignissim vitae ut sapien. Etiam eu sapien <u>underline</u> eleifend dui blandit porta eget sed dolor. Sed iaculis nisl nunc, vel euismod <a href="#">link</a> odio pellentesque ut.
       H6 Blockquote
       blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       H6 Code
@@ -29,6 +29,8 @@ block content
           |   #{"<lorem></lorem>\ntess"}
           |   var t = 1;
           | }
+      H6 Link
+      a(href="https://google.com") www.google.com
       H6 Unordered List
       ul 
         li Level 1.1
@@ -54,8 +56,8 @@ block content
                 li Level 3.2
 
     h3 Tables
-    .elements
-      table.default
+    div(style="margin: 1em 0")
+      table
         caption Default
         thead
           tr 
@@ -78,26 +80,24 @@ block content
             td Foot 3
 
     h3 Colors 
-    .elements.colors 
-      div.color.primary
+    div(style="margin: 1em 0").demo-colors
+      div.color.primary.background-color.text-contrast
         div Primary
-      div.color.secondary 
+      div.color.secondary.background-color.text-contrast
         div Secondary
-      div.color.accent 
-        div Accent
-      div.color.accent-1
-        div Accent 1
-      div.color.accent-2
-        div Accent 2
-    h3 Others
-    .elements.colors
-      div.color.background
+      div.color.background.background-color.text-contrast
         div Background
-      div.color.coding
-        div Coding
-      div.color.gray
-        div Gray
-      div.color.text
+    h3 Others
+    div(style="margin: 1em 0").demo-colors
+      div.color.text.background-color.text-contrast
         div Text
-      div.color.footer
-        div Footer
+      div.color.coding.background-color.text-contrast
+        div Coding
+      div.color.shadow.background-color.text-contrast
+        div Shadow
+      div.color.white.background-color.text-contrast
+        div White
+      div.color.gray.background-color.text-contrast
+        div Gray
+      div.color.black.background-color.text-contrast
+        div Black

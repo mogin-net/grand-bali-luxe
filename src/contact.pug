@@ -1,0 +1,15 @@
+extends /layout.pug
+block title
+  - title = "Contact"
+
+block content
+  .fade-in.center
+    header
+      h3 Contact Information
+    h5 Phone 
+    p.center 
+      include /phone.pug
+    h5 Email
+    p.center
+      include /email.pug
+    hr
