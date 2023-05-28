@@ -5,6 +5,9 @@ include /profile.pug
 doctype html
 html(lang="en")
   head
+    block title
+    - var headerTitle = title ? `${company} :: ${title}` : company
+    title #{headerTitle}
     meta(charset="utf-8")/
     meta(http-equiv="X-UA-Compatible" content="IE=edge")/
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -12,9 +15,12 @@ html(lang="en")
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet")
-    block title
-    - var headerTitle = title ? `${company} :: ${title}` : company
-    title #{headerTitle}
+    meta(property="og:url" content="https://mogin.net")/
+    meta(property="og:title" content=`${headerTitle}`)/
+    meta(property="og:description" content="Luxury Travels in Bali")/
+    meta(property="og:image" content="https://travel.mogin.net/img/banner_300_300.jpg")/
+    meta(property="og:type" content="website")/
+    meta(property="og:locale" content="en_US")/
     noscript: link(rel="stylesheet" href="/css/noscript.css")/
   body
     // Wrapper 
