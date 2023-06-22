@@ -1,6 +1,9 @@
 include /navigation.pug
 include /profile.pug
 - var company = "Grand Bali Luxe Tours"
+- var description = "Don’t settle an ordinary vacation. Escape from your daily life and indulge in the ultimate luxury and extraordinary experience with our private guides."
+- var baseUrl = "https://travel.mogin.net"
+- var primaryColor = "#DFE0DF"
 
 doctype html
 html(lang="en")
@@ -11,6 +14,7 @@ html(lang="en")
     meta(charset="utf-8")/
     meta(http-equiv="X-UA-Compatible" content="IE=edge")/
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    include /meta.pug
     link(rel="stylesheet" href="/css/main.css")/
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
